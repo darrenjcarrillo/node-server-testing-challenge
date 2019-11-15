@@ -24,6 +24,7 @@ describe("server", function() {
     beforeEach(async () => {
       await db("users").truncate();
     });
+
     it("should return 200 OK", function() {
       return request(server)
         .post("/api/users")
