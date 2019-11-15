@@ -17,3 +17,29 @@ describe("server", function() {
     });
   });
 });
+
+describe("server", function() {
+  describe("POST /users/", function() {
+    it("should return 200 OK", function() {
+      return request(server)
+        .post("/api/users")
+        .send({ name: "HELLO" })
+        .then(res => {
+          expect(res.status).toBe(300);
+        });
+    });
+  });
+});
+
+// describe("server", function() {
+//   describe("DELETE /", function() {
+//     it("should return 200 OK", function() {
+//       return request(server)
+//         .post("/api/users")
+//         .send({ name: "HELLO" })
+//         .then(res => {
+//           expect(res.status).toBe(200);
+//         });
+//     });
+//   });
+// });

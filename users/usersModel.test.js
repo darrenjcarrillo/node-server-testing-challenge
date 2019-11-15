@@ -23,6 +23,7 @@ describe("users model", function() {
 
     //   expect(users).toContain([{ name: "Darren" }]);
     // });
+
     it("Should delete user", async function() {
       // await insert({ name: "Darren" });
       const users = await db("users");
